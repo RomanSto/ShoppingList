@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Shopping List</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sing_in">Sing in</string>
+    <string name="registration">Registration</string>
+    <string name="authentication_failed">Authentication failed!</string>
+    <string name="buy">Buy</string>
+    <string name="price">Price</string>
+    <string name="price_format">Price: %s</string>
+    <string name="clear_list">Clear list</string>
+    <string name="sign_out">Sign out</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="itemTouchHelperCallback"
+            type="com.stolbunov.roman.shoppinglist.ui.screens.shopping_list.SwipeRemoveItemCallback" />
+
+        <variable
+            name="vm"
+            type="com.stolbunov.roman.shoppinglist.ui.screens.shopping_list.ShoppingListFragmentViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sopping_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:data="@{vm.shoppingLD}"
+            app:itemTouchHelperCallback="@{itemTouchHelperCallback}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+</layout>
