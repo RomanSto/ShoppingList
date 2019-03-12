@@ -20,7 +20,8 @@
             android:layout_gravity="center"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -40,6 +41,8 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:helperText="@string/hint_password"
+                app:helperTextEnabled="true"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -47,6 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
+                    android:textColorHint="@android:color/black"
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:singleLine="true"
@@ -64,8 +68,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="@{v -> vm.singIn()}"
-                    android:text="@string/sing_in"
-                    app:isVisible="@{vm.isCorrectCredentials}" />
+                    app:isEnabled="@{vm.isCorrectCredentials}"
+                    android:text="@string/sing_in" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/registration_auth"
@@ -73,8 +77,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="@{v -> vm.registration()}"
-                    android:text="@string/registration"
-                    app:isVisible="@{vm.isCorrectCredentials}" />
+                    app:isEnabled="@{vm.isCorrectCredentials}"
+                    android:text="@string/registration" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

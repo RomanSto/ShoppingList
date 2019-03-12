@@ -13,4 +13,13 @@ public class ViewBindingAdapter {
             view.setVisibility(isVisible ? View.VISIBLE : View.GONE);
         }
     }
+
+    @BindingAdapter("isEnabled")
+    public static void setEnabled(View view, Boolean isVisible) {
+        if (isVisible == null) {
+            view.setEnabled(false);
+        } else {
+            view.setEnabled(isVisible);
+        }
+    }
 }
